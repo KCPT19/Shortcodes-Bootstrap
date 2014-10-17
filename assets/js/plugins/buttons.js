@@ -1,75 +1,4 @@
-// JavaScript Document
-(function($) {
-    // Creates a new plugin class and a custom listbox
-    tinymce.create('tinymce.plugins.dws_buttons', {
-        createControl: function(n, cm) {
-            switch (n) {                
-                case 'dws_buttons':
-                var c = cm.createSplitButton('dws_buttons', {
-                    title : 'Buttons',
-                    onclick : function() {
-
-                    }
-                    //'class':'mceListBoxMenu'
-                });
-                
-
-                c.onRenderMenu.add(function(c, m) {
-                    m.onShowMenu.add(function(c,m){
-                        jQuery('#menu_'+c.id).height('auto').width('auto');
-                        jQuery('#menu_'+c.id+'_co').height('auto').addClass('mceListBoxMenu'); 
-                        var $menu = jQuery('#menu_'+c.id+'_co').find('tbody:first');
-                        if($menu.data('added')) return;
-                        $menu.append('');
-                        $menu.append('<div style="padding: 0 10px 10px"><label>Size<br/>\
-                        <select name="size">\
-                        <option value="Mini">Mini</option>\
-                        <option value="Small">Small</option>\
-                        <option value="Normal" selected>Normal</option>\
-                        <option value="Large">Large</option>\
-                        </select></label>\
-                        <label>Types<br/>\
-                        <select name="type">\
-                        <option value="Default"> Default</option>\
-                        <option value="Primary"> Primary</option>\
-                        <option value="Info" selected> Info</option>\
-                        <option value="Success"> Success</option>\
-                        <option value="Warning"> Warning</option>\
-                        <option value="Danger"> Danger</option>\
-                        <option value="Inverse"> Inverse</option>\
-                        <option value="Link"> Link</option>\
-                        </select>\
-                        <label>Link<br />\
-                        <input type="text" name="link" value="#" onclick="this.select()"  /></label>\
-                        </div>');
-
-                        jQuery('<input type="button" class="button" value="Insert" />').appendTo($menu)
-                                .click(function(){
-                                    var size = $menu.find('select[name=size]').val();
-                                    var type = $menu.find('select[name=type]').val();
-                                    var link = $menu.find('input[name=link]').val();
-                                    tinymce.activeEditor.execCommand('mceInsertContent',false,'[button size="'+size.toLowerCase()+'" type="'+type.toLowerCase()+'" value="'+type+'" href="'+link+'"]');
-                                    c.hideMenu();
-                                }).wrap('<div style="padding: 0 10px 10px"></div>')
-                 
-                        $menu.data('added',true); 
-
-                    });
-
-                   // XSmall
-                    m.add({title : 'Buttons', 'class' : 'mceMenuItemTitle'}).setDisabled(1);
-
-                 });
-                // Return the new splitbutton instance
-                return c;
-                
-            }
-            return null;
-        }
-    });
-    tinymce.PluginManager.add('dws_buttons', tinymce.plugins.dws_buttons);
-
-
+(function() {
     tinymce.PluginManager.add('dws_buttons', function( editor, url ) {
         editor.addButton( 'dws_buttons', {
             title : 'Buttons',
@@ -80,32 +9,58 @@
                     body: [
                         {
                             type: 'listbox',
-                            name: 'level',
+                            name: 'size',
                             label: 'Size',
+                            selectedText: 'Normal',
                             'values': [
                                 {text: 'Mini', value: 'mini'},
                                 {text: 'Small', value: 'small'},
-                                {text: 'Normal', value: 'normal', checked:'checked'},
+                                {text: 'Normal', value: 'normal', selected:'selected'},
                                 {text: 'Large', value: 'large'}
+                            ],
+                            onPostRender: function() {
+                                this.value('normal');
+                            }
+                        },
+                        {
+                            type: 'listbox',
+                            name: 'type',
+                            label: 'Types',
+                            'values': [
+                                {text: 'Default', value: 'default'},
+                                {text: 'Primary', value: 'primary'},
+                                {text: 'Info', value: 'info'},
+                                {text: 'Success', value: 'success'},
+                                {text: 'Warning', value: 'warning'},
+                                {text: 'Danger', value: 'danger'},
+                                {text: 'Inverse', value: 'inverse'},
+                                {text: 'Link', value: 'link'}
                             ]
                         },
                         {
                             type: 'textbox',
                             name: 'link',
-                            label: 'Your title'
+                            label: 'Link',
+                            onPostRender: function() {
+                                this.value('#');
+                            }
                         },
                         {
                             type: 'textbox',
-                            name: 'title2',
-                            label: 'Your title'
-                        },
+                            name: 'text',
+                            label: 'Button Text',
+                            onPostRender: function() {
+                                this.value('Submit');
+                            }
+                        }
 
                     ],
                     onsubmit: function( e ) {
-                        editor.insertContent( '<h3>' + e.data.link + '</h3>');
+                        //editor.insertContent( '<h3>' + e.data.link + '</h3>');
+                        editor.insertContent( '[button size="'+e.data.size+'" type="'+e.data.type+'" value="'+e.data.text+'" href="'+e.data.link+'"]' );
                     }
                 });
             }
         });
     });
-})(jQuery);
+})();
