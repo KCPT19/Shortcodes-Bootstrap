@@ -1,6 +1,6 @@
 /* Editor
 -------------------------------------------------------------- */
-.wp_themeSkin .mceSplitButton span.mce_dws_grid,
+.mce-i-mce_dws_grid,
 .wp_themeSkin .mceSplitButton span.mce_dws_alerts,
 .mce-i-mce_dws_buttons,
 .mce-i-mce_dws_icons,
@@ -9,12 +9,11 @@
 	background: url(../img/dwicons.png) no-repeat !important;
 }
 
-.wp_themeSkin .mceSplitButton span.mce_dws_grid {
+.mce-i-mce_dws_grid{
 	background-position: -5px -19px !important;
 }
 
-.wp_themeSkin .mceSplitButton:hover span.mce_dws_grid,
-.wp_themeSkin .mceSplitButtonSelected .mceSplitButton span.mce_dws_grid {
+button:hover .mce-i-mce_dws_grid {
 	background-position: -5px 0 !important;
 }
 
@@ -31,7 +30,7 @@
 	background-position: -46px -19px !important;
 }
 
-.mce-i-mce_dws_buttons,
+button:hover .mce-i-mce_dws_buttons,
 .wp_themeSkin .mceSplitButtonSelected .mceSplitButton span.mce_dws_buttons  {
 	background-position: -46px 0 !important;
 }
