@@ -5,7 +5,7 @@
             icon: 'mce_dws_buttons',
             onclick: function() {
                 editor.windowManager.open( {
-                    title: 'Insert h3 tag',
+                    title: 'Insert a button',
                     body: [
                         {
                             type: 'listbox',

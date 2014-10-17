@@ -4,7 +4,7 @@
             title : 'Icons',
             icon: 'mce_dws_icons',
             onclick: function() {
-                tb_show('Tab builder', SiteParameters.this_plugin_url + '/assets/js/plugins/icons.html?TB_iframe=1');
+                tb_show('Icon Selector', SiteParameters.this_plugin_url + '/assets/js/plugins/icons.html?TB_iframe=1');
             }
         });
     });

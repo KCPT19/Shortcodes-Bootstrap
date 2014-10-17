@@ -1,11 +1,11 @@
 (function() {
     tinymce.PluginManager.add('dws_collapse', function( editor, url ) {
         editor.addButton( 'dws_collapse', {
-            title : 'Buttons',
+            title : 'Collapsible',
             icon: 'mce_dws_collapse',
             onclick: function() {
                 editor.windowManager.open( {
-                    title: 'Insert h3 tag',
+                    title: 'Insert collapsible area',
                     body: [
                         {
                             type: 'textbox',

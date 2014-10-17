@@ -2,7 +2,7 @@
 (function() {
     tinymce.PluginManager.add('dws_grid', function( editor, url ) {
         editor.addButton( 'dws_grid', {
-            title : 'Tabs',
+            title : 'Grid',
             icon: 'mce_dws_grid',
             onclick: function() {
                 //tb_show('Tab builder', SiteParameters.this_plugin_url + '/assets/js/plugins/tabs.html?TB_iframe=1');
