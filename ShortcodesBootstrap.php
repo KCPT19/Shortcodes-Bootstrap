@@ -1,11 +1,11 @@
 <?php
 /*
-Plugin Name: DW Shortcode Bootstrap
-Plugin URI: http://www.designwall.com
+Plugin Name: Shortcodes Bootstrap
+Plugin URI: http://www.kcpt.org
 Description: A simple shortcode generator. Add buttons, columns, tabs, toggles and alerts to your theme.
-Version: 2.0.1
-Author: DesignWall 
-Author URI: http://www.designwall.com
+Version: 1.0
+Author: Fastmover
+Author URI: http://StevenKohlmeyer.com
 */
 
 require_once('inc/dws_grid.php');
@@ -15,7 +15,7 @@ require_once('inc/dws_tabs.php');
 require_once('inc/dws_collapse.php');
 require_once('inc/dws_icons.php');
 
-class DesignwallShortcodes{
+class KCPT_ShortcodesBootstrap{
 	
 	function __construct()
 	{
@@ -141,4 +141,4 @@ class DesignwallShortcodes{
 
 
 }
-$dwcodes = new DesignwallShortcodes();
+$KCPT_ShortcodesBootstrap = new KCPT_ShortcodesBootstrap();

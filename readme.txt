@@ -21,7 +21,7 @@ Shortcodes Bootstrap allow quick and easy implementation of Wordpress shortcodes
 * Widgets builder
 * Well Documented
 
-This has been modifed from the original version to work with Wordpress 3.9 and on.  Wordpress 3.9 updated TinyMCE to version 4, which broke DW Shortcodes Bootstrap plugin.
+This has been modifed from the original version to work with Wordpress 3.9 and on.  Wordpress 3.9 updated TinyMCE to version 4, which broke DW Shortcodes Bootstrap plugin. This is a complete replacement for the previous plugin.
 
 == Installation ==
 
