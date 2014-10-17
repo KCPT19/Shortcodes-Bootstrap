@@ -1,33 +1,12 @@
-// JavaScript Document
 (function() {
-    // Creates a new plugin class and a custom listbox
-    tinymce.create('tinymce.plugins.dws_icons', {
-        init: function(editor) {
-            editor.addButton('button', {
-                title: 'Icons',
-                onclick: function() {
-                    tb_show('Select icons', '../wp-content/plugins/dw-shortcodes-bootstrap/assets/js/plugins/icons.html?TB_iframe=1');
-                }
-            })
-        },
-        createControl: function(n, cm) {
-            switch (n) {                
-                case 'dws_icons':
-                var c = cm.createButton('dws_icons', {
-                    title : 'Icons',
-                    onclick : function() {
-                        tb_show('Select icons', '../wp-content/plugins/dw-shortcodes-bootstrap/assets/js/plugins/icons.html?TB_iframe=1');
-                    }
-                });
-
-        
-                // Return the new splitbutton instance
-                return c;
-                
+    tinymce.PluginManager.add('dws_icons', function( editor, url ) {
+        editor.addButton( 'dws_icons', {
+            title : 'Icons',
+            icon: 'mce_dws_icons',
+            onclick: function() {
+                tb_show('Tab builder', SiteParameters.this_plugin_url + '/assets/js/plugins/icons.html?TB_iframe=1');
             }
-            return null;
-        }
+        });
     });
-    tinymce.PluginManager.add('dws_icons', tinymce.plugins.dws_icons);
 })();
 

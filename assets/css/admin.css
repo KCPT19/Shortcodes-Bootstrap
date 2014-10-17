@@ -3,7 +3,7 @@
 .wp_themeSkin .mceSplitButton span.mce_dws_grid,
 .wp_themeSkin .mceSplitButton span.mce_dws_alerts,
 .wp_themeSkin .mceSplitButton span.mce_dws_buttons,
-.wp_themeSkin span.mce_dws_icons,
+.mce-i-mce_dws_icons,
 .mce-i-mce_dws_tabs,
 .wp_themeSkin .mceSplitButton span.mce_dws_collapse {
 	background: url(../img/dwicons.png) no-repeat !important;
@@ -36,11 +36,11 @@
 	background-position: -46px 0 !important;
 }
 
-.wp_themeSkin span.mce_dws_icons {
+.mce-i-mce_dws_icons {
 	background-position: -67px -20px !important;
 }
 
-.wp_themeSkin span.mce_dws_icons:hover  {
+.mce-i-mce_dws_icons:hover  {
 	background-position: -67px -1px !important;
 }
 

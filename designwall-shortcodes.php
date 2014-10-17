@@ -37,13 +37,13 @@ class DesignwallShortcodes{
 				wp_enqueue_script('dws_bootstrap', plugins_url('assets/js/bootstrap.js', __FILE__ ),array('jquery'));
 		} else {
 			wp_enqueue_style("dws_admin_style", plugins_url('assets/css/admin.css', __FILE__ ));
-            wp_enqueue_script('dws_admin_script', plugins_url('assets/js/tabs.js', __FILE__ ));
+            wp_enqueue_script('dws_empty_script', plugins_url('assets/js/empty.js', __FILE__ ));
             $site_parameters = array(
                 'site_url'          => get_site_url(),
                 'theme_directory'   => get_template_directory_uri(),
                 'this_plugin_url'   => plugins_url('', __FILE__ )
             );
-            wp_localize_script( 'dws_admin_script', 'SiteParameters', $site_parameters );
+            wp_localize_script( 'dws_empty_script', 'SiteParameters', $site_parameters );
 		}
 
 		if ( ! current_user_can('edit_posts') && ! current_user_can('edit_pages') ) {
@@ -78,8 +78,8 @@ class DesignwallShortcodes{
 //		$plgs['dws_grid'] = plugins_url('assets/js/plugins/grid.js', __FILE__ );
 //		$plgs['dws_alerts'] = plugins_url('assets/js/plugins/alert.js', __FILE__ );
 //		$plgs['dws_buttons'] = plugins_url('assets/js/plugins/buttons.js', __FILE__ );
-		$plgs['dws_tabs'] = plugins_url('assets/js/plugins/tabs.js', __FILE__ );
-		$plgs['dws_icons'] = plugins_url('assets/js/plugins/icons.js', __FILE__ );
+		$plgs['dws_tabs']   = plugins_url('assets/js/plugins/tabs.js', __FILE__ );
+		$plgs['dws_icons']  = plugins_url('assets/js/plugins/icons.js', __FILE__ );
 //		$plgs['dws_collapse'] = plugins_url('assets/js/plugins/collapse.js', __FILE__ );
 		return $plgs;
 	}
