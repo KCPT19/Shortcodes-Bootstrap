@@ -2,7 +2,7 @@
 -------------------------------------------------------------- */
 .wp_themeSkin .mceSplitButton span.mce_dws_grid,
 .wp_themeSkin .mceSplitButton span.mce_dws_alerts,
-.wp_themeSkin .mceSplitButton span.mce_dws_buttons,
+.mce-i-mce_dws_buttons,
 .mce-i-mce_dws_icons,
 .mce-i-mce_dws_tabs,
 .wp_themeSkin .mceSplitButton span.mce_dws_collapse {
@@ -27,11 +27,11 @@
 	background-position: -25px 0 !important;
 }
 
-.wp_themeSkin .mceSplitButton span.mce_dws_buttons {
+.mce-i-mce_dws_buttons {
 	background-position: -46px -19px !important;
 }
 
-.wp_themeSkin .mceSplitButton:hover span.mce_dws_buttons,
+.mce-i-mce_dws_buttons,
 .wp_themeSkin .mceSplitButtonSelected .mceSplitButton span.mce_dws_buttons  {
 	background-position: -46px 0 !important;
 }

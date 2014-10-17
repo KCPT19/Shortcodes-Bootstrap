@@ -1,5 +1,5 @@
 // JavaScript Document
-(function() {
+(function($) {
     // Creates a new plugin class and a custom listbox
     tinymce.create('tinymce.plugins.dws_buttons', {
         createControl: function(n, cm) {
@@ -68,4 +68,44 @@
         }
     });
     tinymce.PluginManager.add('dws_buttons', tinymce.plugins.dws_buttons);
-})();
+
+
+    tinymce.PluginManager.add('dws_buttons', function( editor, url ) {
+        editor.addButton( 'dws_buttons', {
+            title : 'Buttons',
+            icon: 'mce_dws_buttons',
+            onclick: function() {
+                editor.windowManager.open( {
+                    title: 'Insert h3 tag',
+                    body: [
+                        {
+                            type: 'listbox',
+                            name: 'level',
+                            label: 'Size',
+                            'values': [
+                                {text: 'Mini', value: 'mini'},
+                                {text: 'Small', value: 'small'},
+                                {text: 'Normal', value: 'normal', checked:'checked'},
+                                {text: 'Large', value: 'large'}
+                            ]
+                        },
+                        {
+                            type: 'textbox',
+                            name: 'link',
+                            label: 'Your title'
+                        },
+                        {
+                            type: 'textbox',
+                            name: 'title2',
+                            label: 'Your title'
+                        },
+
+                    ],
+                    onsubmit: function( e ) {
+                        editor.insertContent( '<h3>' + e.data.link + '</h3>');
+                    }
+                });
+            }
+        });
+    });
+})(jQuery);
