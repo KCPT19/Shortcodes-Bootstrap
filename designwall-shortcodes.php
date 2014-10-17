@@ -80,7 +80,7 @@ class DesignwallShortcodes{
 		$plgs['dws_buttons'] = plugins_url('assets/js/plugins/buttons.js', __FILE__ );
 		$plgs['dws_tabs']   = plugins_url('assets/js/plugins/tabs.js', __FILE__ );
 		$plgs['dws_icons']  = plugins_url('assets/js/plugins/icons.js', __FILE__ );
-//		$plgs['dws_collapse'] = plugins_url('assets/js/plugins/collapse.js', __FILE__ );
+		$plgs['dws_collapse'] = plugins_url('assets/js/plugins/collapse.js', __FILE__ );
 		return $plgs;
 	}
 

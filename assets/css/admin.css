@@ -5,7 +5,7 @@
 .mce-i-mce_dws_buttons,
 .mce-i-mce_dws_icons,
 .mce-i-mce_dws_tabs,
-.wp_themeSkin .mceSplitButton span.mce_dws_collapse {
+.mce-i-mce_dws_collapse {
 	background: url(../img/dwicons.png) no-repeat !important;
 }
 
@@ -50,12 +50,11 @@ button:hover .mce-i-mce_dws_buttons,
 	background-position: -88px -1px !important;
 }
 
-.wp_themeSkin .mceSplitButton span.mce_dws_collapse {
+.mce-i-mce_dws_collapse {
 	background-position: -109px -20px !important;
 }
 
-.wp_themeSkin .mceSplitButton:hover span.mce_dws_collapse,
-.wp_themeSkin .mceSplitButtonSelected .mceSplitButton span.mce_dws_collapse  {
+button:hover .mce-i-mce_dws_collapse {
 	background-position: -109px -1px !important;
 }
 
