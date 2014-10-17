@@ -76,7 +76,7 @@ class DesignwallShortcodes{
 
 		
 		$plgs['dws_grid'] = plugins_url('assets/js/plugins/grid.js', __FILE__ );
-//		$plgs['dws_alerts'] = plugins_url('assets/js/plugins/alert.js', __FILE__ );
+		$plgs['dws_alerts'] = plugins_url('assets/js/plugins/alert.js', __FILE__ );
 		$plgs['dws_buttons'] = plugins_url('assets/js/plugins/buttons.js', __FILE__ );
 		$plgs['dws_tabs']   = plugins_url('assets/js/plugins/tabs.js', __FILE__ );
 		$plgs['dws_icons']  = plugins_url('assets/js/plugins/icons.js', __FILE__ );

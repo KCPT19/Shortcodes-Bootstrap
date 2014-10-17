@@ -1,7 +1,7 @@
 /* Editor
 -------------------------------------------------------------- */
 .mce-i-mce_dws_grid,
-.wp_themeSkin .mceSplitButton span.mce_dws_alerts,
+.mce-i-mce_dws_alert,
 .mce-i-mce_dws_buttons,
 .mce-i-mce_dws_icons,
 .mce-i-mce_dws_tabs,
@@ -17,12 +17,11 @@ button:hover .mce-i-mce_dws_grid {
 	background-position: -5px 0 !important;
 }
 
-.wp_themeSkin .mceSplitButton span.mce_dws_alerts {
+.mce-i-mce_dws_alert {
 	background-position: -25px -19px !important;
 }
 
-.wp_themeSkin .mceSplitButton:hover span.mce_dws_alerts,
-.wp_themeSkin .mceSplitButtonSelected .mceSplitButton span.mce_dws_alerts  {
+button:hover .mce-i-mce_dws_alert {
 	background-position: -25px 0 !important;
 }
 
