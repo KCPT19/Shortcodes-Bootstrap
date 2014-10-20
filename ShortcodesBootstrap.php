@@ -86,7 +86,7 @@ class KCPT_ShortcodesBootstrap{
 
 	/* Add menu page. */
 	function dw_add_options_page() {
-		add_options_page(__('DW Shortcodes options','dwshortcodes'), __('DW Shortcode options','dwshortcodes'), 'manage_options', __FILE__, array(&$this, 'dw_render_form'));
+		add_options_page(__('Shortcodes Bootstrap options','dwshortcodes'), __('Shortcode Bootstrap options','dwshortcodes'), 'manage_options', __FILE__, array(&$this, 'dw_render_form'));
 	}
 
 	/* Define default option settings. */
@@ -110,7 +110,7 @@ class KCPT_ShortcodesBootstrap{
 		?>
 	<div class="wrap">
 		<div class="icon32" id="icon-options-general"><br></div>
-		<h2>DW Shortcodes Options</h2>
+		<h2>Shortcodes Bootstrap Options</h2>
 		<form method="post" action="options.php">
 			<?php settings_fields('dwsc_plugin_options');  ?>
 			<?php $options = get_option('dwsc_options');  ?>
