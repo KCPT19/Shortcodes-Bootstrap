@@ -7,6 +7,10 @@ This is a plugin that is being used on one or more of our websites, so it was up
 
 TinyMCE was updated in Wordpress 3.9, which broke the original plugin's functionality.
 
+Wordpress.org
+=============
+[https://wordpress.org/plugins/shortcodes-bootstrap/](https://wordpress.org/plugins/shortcodes-bootstrap/)
+
 Screenshots
 ===========
 
